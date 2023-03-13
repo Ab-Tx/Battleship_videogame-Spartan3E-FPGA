@@ -1,0 +1,310 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jan 26 09:41:50 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ps2c" LOCATE = SITE "B1" LEVEL 1;
+COMP "ps2d" LOCATE = SITE "C3" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "clock" LOCATE = SITE "M6" LEVEL 1;
+PIN clock_pin<0> = BEL "clock" PINNAME PAD;
+PIN "clock_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "hsync" LOCATE = SITE "J14" LEVEL 1;
+COMP "reset" LOCATE = SITE "A7" LEVEL 1;
+COMP "vsync" LOCATE = SITE "K13" LEVEL 1;
+COMP "sseg<0>" LOCATE = SITE "M12" LEVEL 1;
+COMP "sseg<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "sseg<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "sseg<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "sseg<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "sseg<5>" LOCATE = SITE "H12" LEVEL 1;
+COMP "sseg<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "sseg<7>" LOCATE = SITE "N13" LEVEL 1;
+COMP "outblue<0>" LOCATE = SITE "H13" LEVEL 1;
+COMP "outblue<1>" LOCATE = SITE "J13" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "G12" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "C11" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "G1" LEVEL 1;
+COMP "outred<0>" LOCATE = SITE "C14" LEVEL 1;
+COMP "outred<1>" LOCATE = SITE "D13" LEVEL 1;
+COMP "outred<2>" LOCATE = SITE "F13" LEVEL 1;
+COMP "outgreen<0>" LOCATE = SITE "F14" LEVEL 1;
+COMP "outgreen<1>" LOCATE = SITE "G13" LEVEL 1;
+COMP "outgreen<2>" LOCATE = SITE "G14" LEVEL 1;
+TIMEGRP clockmanager_unit_CLK2X_BUF = BEL "rgb_reg_0" BEL "rgb_reg_1" BEL
+        "rgb_reg_2" BEL "screen_unit/mouse_unit/x_reg_0" BEL
+        "screen_unit/mouse_unit/x_reg_1" BEL "screen_unit/mouse_unit/x_reg_2"
+        BEL "screen_unit/mouse_unit/x_reg_3" BEL
+        "screen_unit/mouse_unit/x_reg_4" BEL "screen_unit/mouse_unit/x_reg_5"
+        BEL "screen_unit/mouse_unit/x_reg_6" BEL
+        "screen_unit/mouse_unit/x_reg_7" BEL "screen_unit/mouse_unit/x_reg_8"
+        BEL "screen_unit/mouse_unit/y_reg_0" BEL
+        "screen_unit/mouse_unit/y_reg_1" BEL "screen_unit/mouse_unit/y_reg_2"
+        BEL "screen_unit/mouse_unit/y_reg_3" BEL
+        "screen_unit/mouse_unit/y_reg_4" BEL "screen_unit/mouse_unit/y_reg_5"
+        BEL "screen_unit/mouse_unit/y_reg_6" BEL
+        "screen_unit/mouse_unit/y_reg_7" BEL "screen_unit/mouse_unit/y_reg_8"
+        BEL "screen_unit/mouse_unit/btn_reg_0" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd1" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd2" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd3" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd4" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd7" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd5" BEL
+        "screen_unit/mouse_unit/state_reg_FSM_FFd6" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/state_reg_FSM_FFd2"
+        BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/state_reg_FSM_FFd1"
+        BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/state_reg_FSM_FFd3"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_7"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_6"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_5"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_4"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_3"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_2"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_1"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_0"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_7" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_6" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_5" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_4" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_3" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_2" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_1" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/b_reg_0" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/f_ps2c_reg" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/n_reg_3" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/n_reg_2" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/n_reg_1" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/n_reg_0" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_12" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_11" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_10" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_9" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_8" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_7" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_6" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_5" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_4" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_3" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_2" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_1" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/c_reg_0" BEL
+        "screen_unit/ym_c_reg_9" BEL "screen_unit/ym_c_reg_8" BEL
+        "screen_unit/ym_c_reg_7" BEL "screen_unit/ym_c_reg_6" BEL
+        "screen_unit/ym_c_reg_5" BEL "screen_unit/ym_c_reg_4" BEL
+        "screen_unit/ym_c_reg_3" BEL "screen_unit/ym_c_reg_2" BEL
+        "screen_unit/ym_c_reg_1" BEL "screen_unit/ym_c_reg_0" BEL
+        "screen_unit/ball_y_reg_9" BEL "screen_unit/ball_y_reg_8" BEL
+        "screen_unit/ball_y_reg_7" BEL "screen_unit/ball_y_reg_6" BEL
+        "screen_unit/ball_y_reg_5" BEL "screen_unit/ball_y_reg_4" BEL
+        "screen_unit/ball_y_reg_3" BEL "screen_unit/ball_y_reg_2" BEL
+        "screen_unit/ball_y_reg_1" BEL "screen_unit/ball_y_reg_0" BEL
+        "screen_unit/ball_x_reg_9" BEL "screen_unit/ball_x_reg_8" BEL
+        "screen_unit/ball_x_reg_7" BEL "screen_unit/ball_x_reg_6" BEL
+        "screen_unit/ball_x_reg_5" BEL "screen_unit/ball_x_reg_4" BEL
+        "screen_unit/ball_x_reg_3" BEL "screen_unit/ball_x_reg_2" BEL
+        "screen_unit/ball_x_reg_1" BEL "screen_unit/ball_x_reg_0" BEL
+        "screen_unit/xm_c_reg_9" BEL "screen_unit/xm_c_reg_8" BEL
+        "screen_unit/xm_c_reg_7" BEL "screen_unit/xm_c_reg_6" BEL
+        "screen_unit/xm_c_reg_5" BEL "screen_unit/xm_c_reg_4" BEL
+        "screen_unit/xm_c_reg_3" BEL "screen_unit/xm_c_reg_2" BEL
+        "screen_unit/xm_c_reg_1" BEL "screen_unit/xm_c_reg_0" BEL
+        "vga_sync_unit/v_count_reg_9" BEL "vga_sync_unit/v_count_reg_8" BEL
+        "vga_sync_unit/v_count_reg_7" BEL "vga_sync_unit/v_count_reg_6" BEL
+        "vga_sync_unit/v_count_reg_5" BEL "vga_sync_unit/v_count_reg_4" BEL
+        "vga_sync_unit/v_count_reg_3" BEL "vga_sync_unit/v_count_reg_2" BEL
+        "vga_sync_unit/v_count_reg_1" BEL "vga_sync_unit/v_count_reg_0" BEL
+        "vga_sync_unit/h_count_reg_9" BEL "vga_sync_unit/h_count_reg_8" BEL
+        "vga_sync_unit/h_count_reg_7" BEL "vga_sync_unit/h_count_reg_6" BEL
+        "vga_sync_unit/h_count_reg_5" BEL "vga_sync_unit/h_count_reg_4" BEL
+        "vga_sync_unit/h_count_reg_3" BEL "vga_sync_unit/h_count_reg_2" BEL
+        "vga_sync_unit/h_count_reg_1" BEL "vga_sync_unit/h_count_reg_0" BEL
+        "vga_sync_unit/h_sync_reg" BEL "vga_sync_unit/mod2_reg" BEL
+        "vga_sync_unit/v_sync_reg" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/state_reg_FSM_FFd2"
+        BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/state_reg_FSM_FFd1"
+        BEL "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_10" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_9" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_8" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_7" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_6" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_5" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_4" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_3" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_2" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/b_reg_1" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/f_ps2c_reg" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/n_reg_3" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/n_reg_2" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/n_reg_1" BEL
+        "screen_unit/mouse_unit/ps2_rxtx_unit/ps2_rx_unit/n_reg_0" BEL
+        "main_unit/rng_unit/seq_1" BEL "main_unit/rng_unit/conta_0" BEL
+        "main_unit/rng_unit/conta_1" BEL "main_unit/rng_unit/conta_2" BEL
+        "main_unit/rng_unit/conta_3" BEL "main_unit/rng_unit/conta_4" BEL
+        "main_unit/rng_unit/conta_5" BEL "main_unit/rng_unit/conta_6" BEL
+        "main_unit/rng_unit/conta_7" BEL "main_unit/rng_unit/conta_8" BEL
+        "main_unit/rng_unit/conta_9" BEL "main_unit/rng_unit/conta_10" BEL
+        "main_unit/rng_unit/conta_11" BEL "main_unit/rng_unit/conta_12" BEL
+        "main_unit/rng_unit/conta_13" BEL "main_unit/rng_unit/conta_14" BEL
+        "main_unit/rng_unit/conta_15" BEL "main_unit/rng_unit/conta_16" BEL
+        "main_unit/rng_unit/conta_17" BEL "main_unit/rng_unit/conta_18" BEL
+        "main_unit/rng_unit/seq_2" BEL "main_unit/rng_unit/seq_3" BEL
+        "main_unit/rng_unit/seq_4" BEL "main_unit/rng_unit/seq_5" BEL
+        "main_unit/rng_unit/seq_6" BEL "main_unit/rng_unit/seq_7" BEL
+        "main_unit/rng_unit/seq_0" BEL "main_unit/state_reg_FSM_FFd5" BEL
+        "main_unit/state_reg_FSM_FFd4" BEL "main_unit/state_reg_FSM_FFd6" BEL
+        "main_unit/state_reg_FSM_FFd2" BEL "main_unit/state_reg_FSM_FFd1" BEL
+        "main_unit/state_reg_FSM_FFd3" BEL "main_unit/disp_unit/q_reg_17" BEL
+        "main_unit/disp_unit/q_reg_16" BEL "main_unit/disp_unit/q_reg_15" BEL
+        "main_unit/disp_unit/q_reg_14" BEL "main_unit/disp_unit/q_reg_13" BEL
+        "main_unit/disp_unit/q_reg_12" BEL "main_unit/disp_unit/q_reg_11" BEL
+        "main_unit/disp_unit/q_reg_10" BEL "main_unit/disp_unit/q_reg_9" BEL
+        "main_unit/disp_unit/q_reg_8" BEL "main_unit/disp_unit/q_reg_7" BEL
+        "main_unit/disp_unit/q_reg_6" BEL "main_unit/disp_unit/q_reg_5" BEL
+        "main_unit/disp_unit/q_reg_4" BEL "main_unit/disp_unit/q_reg_3" BEL
+        "main_unit/disp_unit/q_reg_2" BEL "main_unit/disp_unit/q_reg_1" BEL
+        "main_unit/disp_unit/q_reg_0" BEL "main_unit/poP_31" BEL
+        "main_unit/poP_30" BEL "main_unit/poP_29" BEL "main_unit/poP_28" BEL
+        "main_unit/poP_27" BEL "main_unit/poP_26" BEL "main_unit/poP_25" BEL
+        "main_unit/poP_24" BEL "main_unit/poP_23" BEL "main_unit/poP_22" BEL
+        "main_unit/poP_21" BEL "main_unit/poP_20" BEL "main_unit/poP_19" BEL
+        "main_unit/poP_18" BEL "main_unit/poP_17" BEL "main_unit/poP_16" BEL
+        "main_unit/poP_15" BEL "main_unit/poP_14" BEL "main_unit/poP_13" BEL
+        "main_unit/poP_12" BEL "main_unit/poP_11" BEL "main_unit/poP_10" BEL
+        "main_unit/poP_9" BEL "main_unit/poP_8" BEL "main_unit/poP_7" BEL
+        "main_unit/poP_6" BEL "main_unit/poP_5" BEL "main_unit/poP_4" BEL
+        "main_unit/poP_3" BEL "main_unit/poP_2" BEL "main_unit/poP_1" BEL
+        "main_unit/poP_0" BEL "main_unit/poC_31" BEL "main_unit/poC_30" BEL
+        "main_unit/poC_29" BEL "main_unit/poC_28" BEL "main_unit/poC_27" BEL
+        "main_unit/poC_26" BEL "main_unit/poC_25" BEL "main_unit/poC_24" BEL
+        "main_unit/poC_23" BEL "main_unit/poC_22" BEL "main_unit/poC_21" BEL
+        "main_unit/poC_20" BEL "main_unit/poC_19" BEL "main_unit/poC_18" BEL
+        "main_unit/poC_17" BEL "main_unit/poC_16" BEL "main_unit/poC_15" BEL
+        "main_unit/poC_14" BEL "main_unit/poC_13" BEL "main_unit/poC_12" BEL
+        "main_unit/poC_11" BEL "main_unit/poC_10" BEL "main_unit/poC_9" BEL
+        "main_unit/poC_8" BEL "main_unit/poC_7" BEL "main_unit/poC_6" BEL
+        "main_unit/poC_5" BEL "main_unit/poC_4" BEL "main_unit/poC_3" BEL
+        "main_unit/poC_2" BEL "main_unit/poC_1" BEL "main_unit/poC_0" BEL
+        "main_unit/cpu_grid_out_0" BEL "main_unit/cpu_play" BEL
+        "main_unit/cpu_grid_out_93" BEL "main_unit/cpu_grid_out_88" BEL
+        "main_unit/cpu_grid_out_92" BEL "main_unit/cpu_grid_out_87" BEL
+        "main_unit/cpu_grid_out_91" BEL "main_unit/cpu_grid_out_86" BEL
+        "main_unit/cpu_grid_out_85" BEL "main_unit/cpu_grid_out_84" BEL
+        "main_unit/cpu_grid_out_90" BEL "main_unit/cpu_grid_out_79" BEL
+        "main_unit/cpu_grid_out_83" BEL "main_unit/cpu_grid_out_78" BEL
+        "main_unit/cpu_grid_out_82" BEL "main_unit/cpu_grid_out_81" BEL
+        "main_unit/cpu_grid_out_76" BEL "main_unit/cpu_grid_out_77" BEL
+        "main_unit/cpu_grid_out_80" BEL "main_unit/cpu_grid_out_75" BEL
+        "main_unit/cpu_grid_out_74" BEL "main_unit/cpu_grid_out_69" BEL
+        "main_unit/cpu_grid_out_68" BEL "main_unit/player_hit_grid_59" BEL
+        "main_unit/cpu_grid_out_73" BEL "main_unit/cpu_grid_out_72" BEL
+        "main_unit/cpu_grid_out_67" BEL "main_unit/player_hit_grid_63" BEL
+        "main_unit/player_hit_grid_58" BEL "main_unit/cpu_grid_out_66" BEL
+        "main_unit/player_hit_grid_9" BEL "main_unit/cpu_grid_out_71" BEL
+        "main_unit/player_hit_grid_62" BEL "main_unit/player_hit_grid_57" BEL
+        "main_unit/cpu_grid_out_70" BEL "main_unit/player_hit_grid_8" BEL
+        "main_unit/player_hit_grid_61" BEL "main_unit/cpu_grid_out_65" BEL
+        "main_unit/player_hit_grid_56" BEL "main_unit/cpu_grid_out_64" BEL
+        "main_unit/cpu_grid_out_59" BEL "main_unit/player_hit_grid_7" BEL
+        "main_unit/player_hit_grid_55" BEL "main_unit/cpu_grid_out_63" BEL
+        "main_unit/player_hit_grid_60" BEL "main_unit/cpu_grid_out_58" BEL
+        "main_unit/player_hit_grid_6" BEL "main_unit/player_hit_grid_54" BEL
+        "main_unit/cpu_grid_out_62" BEL "main_unit/cpu_grid_out_57" BEL
+        "main_unit/player_hit_grid_49" BEL "main_unit/player_hit_grid_5" BEL
+        "main_unit/player_hit_grid_53" BEL "main_unit/player_hit_grid_48" BEL
+        "main_unit/cpu_grid_out_61" BEL "main_unit/player_hit_grid_4" BEL
+        "main_unit/player_hit_grid_52" BEL "main_unit/cpu_grid_out_56" BEL
+        "main_unit/player_hit_grid_47" BEL "main_unit/cpu_grid_out_60" BEL
+        "main_unit/cpu_grid_out_55" BEL "main_unit/player_hit_grid_3" BEL
+        "main_unit/player_hit_grid_46" BEL "main_unit/cpu_grid_out_54" BEL
+        "main_unit/player_hit_grid_51" BEL "main_unit/cpu_grid_out_49" BEL
+        "main_unit/player_hit_grid_2" BEL "main_unit/player_hit_grid_50" BEL
+        "main_unit/player_hit_grid_45" BEL "main_unit/cpu_grid_out_48" BEL
+        "main_unit/player_hit_grid_1" BEL "main_unit/cpu_grid_out_53" BEL
+        "main_unit/player_hit_grid_44" BEL "main_unit/player_hit_grid_39" BEL
+        "main_unit/cpu_grid_out_52" BEL "main_unit/cpu_grid_out_47" BEL
+        "main_unit/player_hit_grid_43" BEL "main_unit/player_hit_grid_38" BEL
+        "main_unit/player_hit_grid_0" BEL "main_unit/cpu_grid_out_51" BEL
+        "main_unit/cpu_grid_out_46" BEL "main_unit/player_hit_grid_42" BEL
+        "main_unit/player_hit_grid_37" BEL "main_unit/cpu_grid_out_45" BEL
+        "main_unit/player_hit_grid_41" BEL "main_unit/cpu_grid_out_50" BEL
+        "main_unit/player_hit_grid_36" BEL "main_unit/cpu_grid_out_44" BEL
+        "main_unit/cpu_grid_out_39" BEL "main_unit/player_hit_grid_40" BEL
+        "main_unit/cpu_grid_out_43" BEL "main_unit/cpu_grid_out_38" BEL
+        "main_unit/player_hit_grid_35" BEL "main_unit/player_hit_grid_34" BEL
+        "main_unit/player_hit_grid_29" BEL "main_unit/cpu_grid_out_42" BEL
+        "main_unit/cpu_grid_out_37" BEL "main_unit/player_hit_grid_28" BEL
+        "main_unit/cpu_grid_out_41" BEL "main_unit/player_hit_grid_33" BEL
+        "main_unit/cpu_grid_out_36" BEL "main_unit/player_hit_grid_32" BEL
+        "main_unit/player_hit_grid_27" BEL "main_unit/cpu_grid_out_40" BEL
+        "main_unit/player_hit_grid_31" BEL "main_unit/player_hit_grid_26" BEL
+        "main_unit/cpu_grid_out_35" BEL "main_unit/cpu_grid_out_34" BEL
+        "main_unit/cpu_grid_out_29" BEL "main_unit/player_hit_grid_30" BEL
+        "main_unit/player_hit_grid_25" BEL "main_unit/cpu_grid_out_28" BEL
+        "main_unit/player_hit_grid_24" BEL "main_unit/cpu_grid_out_33" BEL
+        "main_unit/player_hit_grid_19" BEL "main_unit/cpu_grid_out_32" BEL
+        "main_unit/cpu_grid_out_27" BEL "main_unit/player_hit_grid_23" BEL
+        "main_unit/cpu_grid_out_31" BEL "main_unit/cpu_grid_out_26" BEL
+        "main_unit/player_hit_grid_18" BEL "main_unit/player_hit_grid_22" BEL
+        "main_unit/player_hit_grid_17" BEL "main_unit/cpu_grid_out_30" BEL
+        "main_unit/cpu_grid_out_25" BEL "main_unit/player_hit_grid_16" BEL
+        "main_unit/cpu_grid_out_24" BEL "main_unit/player_hit_grid_21" BEL
+        "main_unit/cpu_grid_out_19" BEL "main_unit/player_hit_grid_20" BEL
+        "main_unit/player_hit_grid_15" BEL "main_unit/cpu_grid_out_23" BEL
+        "main_unit/player_hit_grid_14" BEL "main_unit/cpu_grid_out_22" BEL
+        "main_unit/cpu_grid_out_18" BEL "main_unit/cpu_grid_out_17" BEL
+        "main_unit/player_hit_grid_13" BEL "main_unit/cpu_grid_out_21" BEL
+        "main_unit/cpu_grid_out_16" BEL "main_unit/cpu_grid_out_20" BEL
+        "main_unit/cpu_grid_out_15" BEL "main_unit/player_hit_grid_12" BEL
+        "main_unit/player_hit_grid_11" BEL "main_unit/cpu_grid_out_14" BEL
+        "main_unit/player_hit_grid_10" BEL "main_unit/cpu_grid_out_13" BEL
+        "main_unit/cpu_grid_out_11" BEL "main_unit/cpu_grid_out_12" BEL
+        "main_unit/cpu_grid_out_10" BEL "main_unit/cpu_grid_out_9" BEL
+        "main_unit/cpu_grid_out_8" BEL "main_unit/cpu_grid_out_6" BEL
+        "main_unit/cpu_grid_out_5" BEL "main_unit/cpu_grid_out_7" BEL
+        "main_unit/cpu_grid_out_4" BEL "main_unit/cpu_grid_out_3" BEL
+        "main_unit/cpu_grid_out_2" BEL "main_unit/cpu_grid_out_127" BEL
+        "main_unit/cpu_grid_out_126" BEL "main_unit/cpu_grid_out_1" BEL
+        "main_unit/cpu_grid_out_125" BEL "main_unit/cpu_grid_out_124" BEL
+        "main_unit/cpu_grid_out_119" BEL "main_unit/cpu_grid_out_123" BEL
+        "main_unit/cpu_grid_out_122" BEL "main_unit/cpu_grid_out_117" BEL
+        "main_unit/cpu_grid_out_118" BEL "main_unit/cpu_grid_out_121" BEL
+        "main_unit/cpu_grid_out_116" BEL "main_unit/cpu_grid_out_120" BEL
+        "main_unit/cpu_grid_out_115" BEL "main_unit/cpu_grid_out_109" BEL
+        "main_unit/cpu_grid_out_113" BEL "main_unit/cpu_grid_out_114" BEL
+        "main_unit/cpu_grid_out_108" BEL "main_unit/cpu_grid_out_112" BEL
+        "main_unit/cpu_grid_out_107" BEL "main_unit/cpu_grid_out_111" BEL
+        "main_unit/cpu_grid_out_110" BEL "main_unit/cpu_grid_out_105" BEL
+        "main_unit/cpu_grid_out_106" BEL "main_unit/cpu_grid_out_104" BEL
+        "main_unit/cpu_grid_out_103" BEL "main_unit/cpu_grid_out_102" BEL
+        "main_unit/cpu_grid_out_100" BEL "main_unit/cpu_grid_out_101" BEL
+        "main_unit/cpu_grid_out_99" BEL "main_unit/click" BEL
+        "main_unit/cpu_grid_out_98" BEL "main_unit/cpu_grid_out_97" BEL
+        "main_unit/cpu_grid_out_96" BEL "main_unit/cpu_grid_out_95" BEL
+        "main_unit/cpu_grid_out_94" BEL "main_unit/cpu_grid_out_89" BEL
+        "clockmanager_unit/CLK2X_BUFG_INST.GCLKMUX" BEL
+        "clockmanager_unit/CLK2X_BUFG_INST";
+PIN clockmanager_unit/DCM_SP_INST_pins<3> = BEL
+        "clockmanager_unit/DCM_SP_INST" PINNAME CLKIN;
+TIMEGRP clock = PIN "clockmanager_unit/DCM_SP_INST_pins<3>";
+TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+TS_clockmanager_unit_CLK2X_BUF = PERIOD TIMEGRP "clockmanager_unit_CLK2X_BUF"
+        TS_clock / 2 HIGH 50%;
+SCHEMATIC END;
+

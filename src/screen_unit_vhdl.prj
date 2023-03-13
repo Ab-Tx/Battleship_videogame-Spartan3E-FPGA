@@ -1,0 +1,6 @@
+vhdl work "C:\Users\Dallas\Documents\XillinxProjects\Projeto_V04\ps2_tx.vhd"
+vhdl work "C:\Users\Dallas\Documents\XillinxProjects\Projeto_V04\ps2_rx.vhd"
+vhdl work "C:\Users\Dallas\Documents\XillinxProjects\Projeto_V04\ps2_rxtx.vhd"
+vhdl work "C:\Users\Dallas\Documents\XillinxProjects\Projeto_V04\mouse.vhd"
+vhdl work "C:\Users\Dallas\Documents\XillinxProjects\Projeto_V04\char_rom.vhd"
+vhdl work "C:\Users\Dallas\Documents\XillinxProjects\Projeto_V04\screen_unit.vhd"

@@ -1,0 +1,44 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/ps2_tx.vhd" in Library work.
+Architecture arch of Entity ps2_tx is up to date.
+Compiling vhdl file "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/ps2_rx.vhd" in Library work.
+Architecture arch of Entity ps2_rx is up to date.
+Compiling vhdl file "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/ps2_rxtx.vhd" in Library work.
+Architecture arch of Entity ps2_rxtx is up to date.
+Compiling vhdl file "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/mouse.vhd" in Library work.
+Architecture arch of Entity mouse is up to date.
+Compiling vhdl file "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/char_rom.vhd" in Library work.
+Architecture content of Entity char_rom is up to date.
+Compiling vhdl file "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/screen_unit.vhd" in Library work.
+Architecture arch of Entity screen_unit is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.45 secs
+ 
+--> 
+
+Total memory usage is 4442188 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

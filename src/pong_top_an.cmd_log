@@ -1,0 +1,181 @@
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 
+xst -intstyle ise -ifn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.xst" -ofn "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc pong_top_an.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pong_top_an_map.ncd pong_top_an.ngd pong_top_an.pcf 
+par -w -intstyle ise -ol high -t 1 pong_top_an_map.ncd pong_top_an.ncd pong_top_an.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf 
+bitgen -intstyle ise -f pong_top_an.ut pong_top_an.ncd 

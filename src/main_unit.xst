@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Dallas/Documents/XillinxProjects/Projeto_V04/xst"
+elaborate
+-ifn main_unit.prj
+-ifmt mixed

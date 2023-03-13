@@ -1,0 +1,1236 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Programas\Xillinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise
+-v 3 -s 5 -n 3 -fastpaths -xml pong_top_an.twx pong_top_an.ncd -o
+pong_top_an.twr pong_top_an.pcf -ucf DigBasys2.ucf
+
+Design file:              pong_top_an.ncd
+Physical constraint file: pong_top_an.pcf
+Device,package,speed:     xc3s100e,cp132,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.998ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.002ns (333.111MHz) (Tdcmpco)
+  Physical resource: clockmanager_unit/DCM_SP_INST/CLK2X
+  Logical resource: clockmanager_unit/DCM_SP_INST/CLK2X
+  Location pin: DCM_X0Y0.CLK2X
+  Clock network: clockmanager_unit/CLK2X_BUF
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: clockmanager_unit/DCM_SP_INST/CLKIN
+  Logical resource: clockmanager_unit/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: clockmanager_unit/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: clockmanager_unit/DCM_SP_INST/CLKIN
+  Logical resource: clockmanager_unit/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: clockmanager_unit/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clockmanager_unit_CLK2X_BUF = PERIOD TIMEGRP 
+"clockmanager_unit_CLK2X_BUF"         TS_clock / 2 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 18072902 paths analyzed, 1164 endpoints analyzed, 9 failing endpoints
+ 9 timing errors detected. (9 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  24.494ns.
+--------------------------------------------------------------------------------
+
+Paths for end point rgb_reg_2 (SLICE_X19Y16.F4), 4635054 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -14.494ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_1 (FF)
+  Destination:          rgb_reg_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      24.492ns (Levels of Logic = 26)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.002ns (0.021 - 0.023)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_1 to rgb_reg_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.YQ      Tcko                  0.567   main_unit/poC<0>
+                                                       main_unit/poC_1
+    SLICE_X17Y22.F2      net (fanout=7)        0.707   main_unit/poC<1>
+    SLICE_X17Y22.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+                                                       main_unit/poC<1>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<0>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.COUT    Tbyp                  0.103   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X26Y1.F1       net (fanout=7)        1.085   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X26Y1.X        Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom0000100
+                                                       screen_unit/char_rom/Mrom_data_rom00001001
+    SLICE_X24Y0.F4       net (fanout=1)        0.304   screen_unit/char_rom/Mrom_data_rom0000100
+    SLICE_X24Y0.F5       Tif5                  0.896   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_1615
+                                                       screen_unit/Mmux_font_pixel_15_f5_6
+    SLICE_X24Y0.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_15_f57
+    SLICE_X24Y0.FX       Tinafx                0.315   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_14_f6_1
+    SLICE_X24Y1.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f62
+    SLICE_X24Y1.Y        Tif6y                 0.354   screen_unit/Mmux_font_pixel_13_f7
+                                                       screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.G4      net (fanout=1)        0.837   screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_102
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y16.F3      net (fanout=3)        0.270   N266
+    SLICE_X18Y16.X       Tif5x                 1.000   N597
+                                                       screen_unit/graph_rgb<2>93_SW0_G
+                                                       screen_unit/graph_rgb<2>93_SW0
+    SLICE_X19Y16.F4      net (fanout=1)        0.020   N597
+    SLICE_X19Y16.CLK     Tfck                  0.728   rgb_reg<2>
+                                                       screen_unit/graph_rgb<2>214
+                                                       rgb_reg_2
+    -------------------------------------------------  ---------------------------
+    Total                                     24.492ns (15.942ns logic, 8.550ns route)
+                                                       (65.1% logic, 34.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -14.457ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_1 (FF)
+  Destination:          rgb_reg_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      24.455ns (Levels of Logic = 26)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.002ns (0.021 - 0.023)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_1 to rgb_reg_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.YQ      Tcko                  0.567   main_unit/poC<0>
+                                                       main_unit/poC_1
+    SLICE_X17Y22.F2      net (fanout=7)        0.707   main_unit/poC<1>
+    SLICE_X17Y22.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+                                                       main_unit/poC<1>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<0>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.COUT    Tbyp                  0.103   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X12Y12.F2      net (fanout=7)        1.009   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X12Y12.X       Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000078
+                                                       screen_unit/char_rom/Mrom_data_rom0000781
+    SLICE_X20Y10.F1      net (fanout=1)        0.876   screen_unit/char_rom/Mrom_data_rom000078
+    SLICE_X20Y10.F5      Tif5                  0.896   screen_unit/Mmux_font_pixel_14_f56
+                                                       screen_unit/Mmux_font_pixel_1510
+                                                       screen_unit/Mmux_font_pixel_14_f5_5
+    SLICE_X20Y10.FXINA   net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f56
+    SLICE_X20Y10.FX      Tinafx                0.315   screen_unit/Mmux_font_pixel_14_f56
+                                                       screen_unit/Mmux_font_pixel_13_f6_2
+    SLICE_X20Y11.FXINA   net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_13_f63
+    SLICE_X20Y11.Y       Tif6y                 0.354   screen_unit/Mmux_font_pixel_12_f7
+                                                       screen_unit/Mmux_font_pixel_12_f7
+    SLICE_X19Y12.F3      net (fanout=1)        0.304   screen_unit/Mmux_font_pixel_12_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_91
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y16.F3      net (fanout=3)        0.270   N266
+    SLICE_X18Y16.X       Tif5x                 1.000   N597
+                                                       screen_unit/graph_rgb<2>93_SW0_G
+                                                       screen_unit/graph_rgb<2>93_SW0
+    SLICE_X19Y16.F4      net (fanout=1)        0.020   N597
+    SLICE_X19Y16.CLK     Tfck                  0.728   rgb_reg<2>
+                                                       screen_unit/graph_rgb<2>214
+                                                       rgb_reg_2
+    -------------------------------------------------  ---------------------------
+    Total                                     24.455ns (15.942ns logic, 8.513ns route)
+                                                       (65.2% logic, 34.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -14.407ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_3 (FF)
+  Destination:          rgb_reg_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      24.404ns (Levels of Logic = 25)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.003ns (0.021 - 0.024)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_3 to rgb_reg_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y18.YQ      Tcko                  0.567   main_unit/poC<2>
+                                                       main_unit/poC_3
+    SLICE_X17Y23.F4      net (fanout=5)        0.722   main_unit/poC<3>
+    SLICE_X17Y23.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/poC<3>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X26Y1.F1       net (fanout=7)        1.085   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X26Y1.X        Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom0000100
+                                                       screen_unit/char_rom/Mrom_data_rom00001001
+    SLICE_X24Y0.F4       net (fanout=1)        0.304   screen_unit/char_rom/Mrom_data_rom0000100
+    SLICE_X24Y0.F5       Tif5                  0.896   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_1615
+                                                       screen_unit/Mmux_font_pixel_15_f5_6
+    SLICE_X24Y0.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_15_f57
+    SLICE_X24Y0.FX       Tinafx                0.315   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_14_f6_1
+    SLICE_X24Y1.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f62
+    SLICE_X24Y1.Y        Tif6y                 0.354   screen_unit/Mmux_font_pixel_13_f7
+                                                       screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.G4      net (fanout=1)        0.837   screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_102
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y16.F3      net (fanout=3)        0.270   N266
+    SLICE_X18Y16.X       Tif5x                 1.000   N597
+                                                       screen_unit/graph_rgb<2>93_SW0_G
+                                                       screen_unit/graph_rgb<2>93_SW0
+    SLICE_X19Y16.F4      net (fanout=1)        0.020   N597
+    SLICE_X19Y16.CLK     Tfck                  0.728   rgb_reg<2>
+                                                       screen_unit/graph_rgb<2>214
+                                                       rgb_reg_2
+    -------------------------------------------------  ---------------------------
+    Total                                     24.404ns (15.839ns logic, 8.565ns route)
+                                                       (64.9% logic, 35.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point rgb_reg_1 (SLICE_X19Y14.F4), 5617727 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -14.276ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_1 (FF)
+  Destination:          rgb_reg_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      24.272ns (Levels of Logic = 26)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.004ns (0.019 - 0.023)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_1 to rgb_reg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.YQ      Tcko                  0.567   main_unit/poC<0>
+                                                       main_unit/poC_1
+    SLICE_X17Y22.F2      net (fanout=7)        0.707   main_unit/poC<1>
+    SLICE_X17Y22.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+                                                       main_unit/poC<1>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<0>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.COUT    Tbyp                  0.103   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X26Y1.F1       net (fanout=7)        1.085   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X26Y1.X        Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom0000100
+                                                       screen_unit/char_rom/Mrom_data_rom00001001
+    SLICE_X24Y0.F4       net (fanout=1)        0.304   screen_unit/char_rom/Mrom_data_rom0000100
+    SLICE_X24Y0.F5       Tif5                  0.896   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_1615
+                                                       screen_unit/Mmux_font_pixel_15_f5_6
+    SLICE_X24Y0.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_15_f57
+    SLICE_X24Y0.FX       Tinafx                0.315   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_14_f6_1
+    SLICE_X24Y1.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f62
+    SLICE_X24Y1.Y        Tif6y                 0.354   screen_unit/Mmux_font_pixel_13_f7
+                                                       screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.G4      net (fanout=1)        0.837   screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_102
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y14.G3      net (fanout=3)        0.050   N266
+    SLICE_X18Y14.X       Tif5x                 1.000   N603
+                                                       screen_unit/graph_rgb<1>98_SW0_SW0_F
+                                                       screen_unit/graph_rgb<1>98_SW0_SW0
+    SLICE_X19Y14.F4      net (fanout=1)        0.020   N603
+    SLICE_X19Y14.CLK     Tfck                  0.728   rgb_reg<1>
+                                                       screen_unit/graph_rgb<1>222
+                                                       rgb_reg_1
+    -------------------------------------------------  ---------------------------
+    Total                                     24.272ns (15.942ns logic, 8.330ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -14.239ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_1 (FF)
+  Destination:          rgb_reg_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      24.235ns (Levels of Logic = 26)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.004ns (0.019 - 0.023)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_1 to rgb_reg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.YQ      Tcko                  0.567   main_unit/poC<0>
+                                                       main_unit/poC_1
+    SLICE_X17Y22.F2      net (fanout=7)        0.707   main_unit/poC<1>
+    SLICE_X17Y22.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+                                                       main_unit/poC<1>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<0>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.COUT    Tbyp                  0.103   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X12Y12.F2      net (fanout=7)        1.009   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X12Y12.X       Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000078
+                                                       screen_unit/char_rom/Mrom_data_rom0000781
+    SLICE_X20Y10.F1      net (fanout=1)        0.876   screen_unit/char_rom/Mrom_data_rom000078
+    SLICE_X20Y10.F5      Tif5                  0.896   screen_unit/Mmux_font_pixel_14_f56
+                                                       screen_unit/Mmux_font_pixel_1510
+                                                       screen_unit/Mmux_font_pixel_14_f5_5
+    SLICE_X20Y10.FXINA   net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f56
+    SLICE_X20Y10.FX      Tinafx                0.315   screen_unit/Mmux_font_pixel_14_f56
+                                                       screen_unit/Mmux_font_pixel_13_f6_2
+    SLICE_X20Y11.FXINA   net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_13_f63
+    SLICE_X20Y11.Y       Tif6y                 0.354   screen_unit/Mmux_font_pixel_12_f7
+                                                       screen_unit/Mmux_font_pixel_12_f7
+    SLICE_X19Y12.F3      net (fanout=1)        0.304   screen_unit/Mmux_font_pixel_12_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_91
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y14.G3      net (fanout=3)        0.050   N266
+    SLICE_X18Y14.X       Tif5x                 1.000   N603
+                                                       screen_unit/graph_rgb<1>98_SW0_SW0_F
+                                                       screen_unit/graph_rgb<1>98_SW0_SW0
+    SLICE_X19Y14.F4      net (fanout=1)        0.020   N603
+    SLICE_X19Y14.CLK     Tfck                  0.728   rgb_reg<1>
+                                                       screen_unit/graph_rgb<1>222
+                                                       rgb_reg_1
+    -------------------------------------------------  ---------------------------
+    Total                                     24.235ns (15.942ns logic, 8.293ns route)
+                                                       (65.8% logic, 34.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -14.189ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_3 (FF)
+  Destination:          rgb_reg_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      24.184ns (Levels of Logic = 25)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.005ns (0.019 - 0.024)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_3 to rgb_reg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y18.YQ      Tcko                  0.567   main_unit/poC<2>
+                                                       main_unit/poC_3
+    SLICE_X17Y23.F4      net (fanout=5)        0.722   main_unit/poC<3>
+    SLICE_X17Y23.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/poC<3>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X26Y1.F1       net (fanout=7)        1.085   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X26Y1.X        Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom0000100
+                                                       screen_unit/char_rom/Mrom_data_rom00001001
+    SLICE_X24Y0.F4       net (fanout=1)        0.304   screen_unit/char_rom/Mrom_data_rom0000100
+    SLICE_X24Y0.F5       Tif5                  0.896   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_1615
+                                                       screen_unit/Mmux_font_pixel_15_f5_6
+    SLICE_X24Y0.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_15_f57
+    SLICE_X24Y0.FX       Tinafx                0.315   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_14_f6_1
+    SLICE_X24Y1.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f62
+    SLICE_X24Y1.Y        Tif6y                 0.354   screen_unit/Mmux_font_pixel_13_f7
+                                                       screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.G4      net (fanout=1)        0.837   screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_102
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y14.G3      net (fanout=3)        0.050   N266
+    SLICE_X18Y14.X       Tif5x                 1.000   N603
+                                                       screen_unit/graph_rgb<1>98_SW0_SW0_F
+                                                       screen_unit/graph_rgb<1>98_SW0_SW0
+    SLICE_X19Y14.F4      net (fanout=1)        0.020   N603
+    SLICE_X19Y14.CLK     Tfck                  0.728   rgb_reg<1>
+                                                       screen_unit/graph_rgb<1>222
+                                                       rgb_reg_1
+    -------------------------------------------------  ---------------------------
+    Total                                     24.184ns (15.839ns logic, 8.345ns route)
+                                                       (65.5% logic, 34.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point rgb_reg_0 (SLICE_X19Y15.F3), 3838941 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -13.936ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_1 (FF)
+  Destination:          rgb_reg_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      23.932ns (Levels of Logic = 26)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.004ns (0.019 - 0.023)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_1 to rgb_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.YQ      Tcko                  0.567   main_unit/poC<0>
+                                                       main_unit/poC_1
+    SLICE_X17Y22.F2      net (fanout=7)        0.707   main_unit/poC<1>
+    SLICE_X17Y22.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+                                                       main_unit/poC<1>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<0>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.COUT    Tbyp                  0.103   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X26Y1.F1       net (fanout=7)        1.085   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X26Y1.X        Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom0000100
+                                                       screen_unit/char_rom/Mrom_data_rom00001001
+    SLICE_X24Y0.F4       net (fanout=1)        0.304   screen_unit/char_rom/Mrom_data_rom0000100
+    SLICE_X24Y0.F5       Tif5                  0.896   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_1615
+                                                       screen_unit/Mmux_font_pixel_15_f5_6
+    SLICE_X24Y0.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_15_f57
+    SLICE_X24Y0.FX       Tinafx                0.315   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_14_f6_1
+    SLICE_X24Y1.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f62
+    SLICE_X24Y1.Y        Tif6y                 0.354   screen_unit/Mmux_font_pixel_13_f7
+                                                       screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.G4      net (fanout=1)        0.837   screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_102
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y15.F3      net (fanout=3)        0.050   N266
+    SLICE_X18Y15.X       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<0>2373
+    SLICE_X19Y15.F3      net (fanout=1)        0.020   screen_unit/graph_rgb<0>2373
+    SLICE_X19Y15.CLK     Tfck                  0.728   rgb_reg<0>
+                                                       screen_unit/graph_rgb<0>1
+                                                       rgb_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                     23.932ns (15.602ns logic, 8.330ns route)
+                                                       (65.2% logic, 34.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -13.899ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_1 (FF)
+  Destination:          rgb_reg_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      23.895ns (Levels of Logic = 26)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.004ns (0.019 - 0.023)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_1 to rgb_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y17.YQ      Tcko                  0.567   main_unit/poC<0>
+                                                       main_unit/poC_1
+    SLICE_X17Y22.F2      net (fanout=7)        0.707   main_unit/poC<1>
+    SLICE_X17Y22.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+                                                       main_unit/poC<1>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<0>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<1>
+    SLICE_X17Y23.COUT    Tbyp                  0.103   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X12Y12.F2      net (fanout=7)        1.009   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X12Y12.X       Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000078
+                                                       screen_unit/char_rom/Mrom_data_rom0000781
+    SLICE_X20Y10.F1      net (fanout=1)        0.876   screen_unit/char_rom/Mrom_data_rom000078
+    SLICE_X20Y10.F5      Tif5                  0.896   screen_unit/Mmux_font_pixel_14_f56
+                                                       screen_unit/Mmux_font_pixel_1510
+                                                       screen_unit/Mmux_font_pixel_14_f5_5
+    SLICE_X20Y10.FXINA   net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f56
+    SLICE_X20Y10.FX      Tinafx                0.315   screen_unit/Mmux_font_pixel_14_f56
+                                                       screen_unit/Mmux_font_pixel_13_f6_2
+    SLICE_X20Y11.FXINA   net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_13_f63
+    SLICE_X20Y11.Y       Tif6y                 0.354   screen_unit/Mmux_font_pixel_12_f7
+                                                       screen_unit/Mmux_font_pixel_12_f7
+    SLICE_X19Y12.F3      net (fanout=1)        0.304   screen_unit/Mmux_font_pixel_12_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_91
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y15.F3      net (fanout=3)        0.050   N266
+    SLICE_X18Y15.X       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<0>2373
+    SLICE_X19Y15.F3      net (fanout=1)        0.020   screen_unit/graph_rgb<0>2373
+    SLICE_X19Y15.CLK     Tfck                  0.728   rgb_reg<0>
+                                                       screen_unit/graph_rgb<0>1
+                                                       rgb_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                     23.895ns (15.602ns logic, 8.293ns route)
+                                                       (65.3% logic, 34.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -13.849ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               main_unit/poC_3 (FF)
+  Destination:          rgb_reg_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      23.844ns (Levels of Logic = 25)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.005ns (0.019 - 0.024)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: main_unit/poC_3 to rgb_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y18.YQ      Tcko                  0.567   main_unit/poC<2>
+                                                       main_unit/poC_3
+    SLICE_X17Y23.F4      net (fanout=5)        0.722   main_unit/poC<3>
+    SLICE_X17Y23.COUT    Topcyf                1.011   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+                                                       main_unit/poC<3>_rt
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<2>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<3>
+    SLICE_X17Y24.COUT    Tbyp                  0.103   screen_unit/ball_x_next<3>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<4>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<5>
+    SLICE_X17Y25.COUT    Tbyp                  0.103   screen_unit/ball_y_next<7>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<6>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<7>
+    SLICE_X17Y26.COUT    Tbyp                  0.103   screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<1>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<8>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.CIN     net (fanout=1)        0.000   main_unit/Mcompar_pontC_cmp_lt0000_cy<9>
+    SLICE_X17Y27.XB      Tcinxb                0.352   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+                                                       main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.G2      net (fanout=7)        0.968   main_unit/Mcompar_pontC_cmp_lt0000_cy<10>
+    SLICE_X16Y13.Y       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001_SW0
+    SLICE_X16Y13.F3      net (fanout=1)        0.020   main_unit/state_reg_cmp_eq0001_SW0/O
+    SLICE_X16Y13.X       Tilo                  0.660   main_unit/state_reg_cmp_eq0001
+                                                       main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.G4       net (fanout=7)        0.812   main_unit/state_reg_cmp_eq0001
+    SLICE_X0Y12.Y        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<3>1211
+    SLICE_X0Y12.F4       net (fanout=5)        0.051   N448
+    SLICE_X0Y12.X        Tilo                  0.660   N222
+                                                       screen_unit/text_font_addr<7>132
+    SLICE_X3Y12.G4       net (fanout=4)        0.279   N222
+    SLICE_X3Y12.Y        Tilo                  0.612   screen_unit/text_font_addr<3>130
+                                                       screen_unit/text_en3_and000254
+    SLICE_X3Y10.BX       net (fanout=30)       0.478   screen_unit/text_en3
+    SLICE_X3Y10.X        Tbxx                  0.641   screen_unit/text_font_addr<3>189
+                                                       screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.G3       net (fanout=1)        0.019   screen_unit/text_font_addr<3>189
+    SLICE_X2Y11.Y        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>159_SW0
+    SLICE_X2Y11.F3       net (fanout=1)        0.020   screen_unit/text_font_addr<3>159_SW0/O
+    SLICE_X2Y11.X        Tilo                  0.660   screen_unit/text_font_addr<3>224
+                                                       screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.G4       net (fanout=1)        0.563   screen_unit/text_font_addr<3>224
+    SLICE_X15Y9.Y        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/text_font_addr<3>270
+    SLICE_X15Y9.F4       net (fanout=5)        0.051   screen_unit/text_font_addr<3>
+    SLICE_X15Y9.X        Tilo                  0.612   screen_unit/font_addr<3>
+                                                       screen_unit/font_addr<3>1
+    SLICE_X6Y2.G2        net (fanout=102)      1.267   screen_unit/font_addr<3>
+    SLICE_X6Y2.Y         Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom000061
+                                                       screen_unit/char_rom/Mrom_data_rom00001231
+    SLICE_X26Y1.F1       net (fanout=7)        1.085   screen_unit/char_rom/Mrom_data_rom0000123
+    SLICE_X26Y1.X        Tilo                  0.660   screen_unit/char_rom/Mrom_data_rom0000100
+                                                       screen_unit/char_rom/Mrom_data_rom00001001
+    SLICE_X24Y0.F4       net (fanout=1)        0.304   screen_unit/char_rom/Mrom_data_rom0000100
+    SLICE_X24Y0.F5       Tif5                  0.896   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_1615
+                                                       screen_unit/Mmux_font_pixel_15_f5_6
+    SLICE_X24Y0.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_15_f57
+    SLICE_X24Y0.FX       Tinafx                0.315   screen_unit/Mmux_font_pixel_15_f57
+                                                       screen_unit/Mmux_font_pixel_14_f6_1
+    SLICE_X24Y1.FXINA    net (fanout=1)        0.000   screen_unit/Mmux_font_pixel_14_f62
+    SLICE_X24Y1.Y        Tif6y                 0.354   screen_unit/Mmux_font_pixel_13_f7
+                                                       screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.G4      net (fanout=1)        0.837   screen_unit/Mmux_font_pixel_13_f7
+    SLICE_X19Y12.X       Tif5x                 0.890   screen_unit/Mmux_font_pixel_8_f51
+                                                       screen_unit/Mmux_font_pixel_102
+                                                       screen_unit/Mmux_font_pixel_8_f5_0
+    SLICE_X16Y14.G4      net (fanout=1)        0.357   screen_unit/Mmux_font_pixel_8_f51
+    SLICE_X16Y14.X       Tif5x                 1.000   screen_unit/font_pixel1
+                                                       screen_unit/Mmux_font_pixel_4
+                                                       screen_unit/Mmux_font_pixel_2_f5
+    SLICE_X18Y15.G4      net (fanout=5)        0.442   screen_unit/font_pixel1
+    SLICE_X18Y15.Y       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<2>221
+    SLICE_X18Y15.F3      net (fanout=3)        0.050   N266
+    SLICE_X18Y15.X       Tilo                  0.660   screen_unit/graph_rgb<0>2373
+                                                       screen_unit/graph_rgb<0>2373
+    SLICE_X19Y15.F3      net (fanout=1)        0.020   screen_unit/graph_rgb<0>2373
+    SLICE_X19Y15.CLK     Tfck                  0.728   rgb_reg<0>
+                                                       screen_unit/graph_rgb<0>1
+                                                       rgb_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                     23.844ns (15.499ns logic, 8.345ns route)
+                                                       (65.0% logic, 35.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clockmanager_unit_CLK2X_BUF = PERIOD TIMEGRP "clockmanager_unit_CLK2X_BUF"
+        TS_clock / 2 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point main_unit/rng_unit/seq_1 (SLICE_X13Y24.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.842ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               main_unit/rng_unit/seq_0 (FF)
+  Destination:          main_unit/rng_unit/seq_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.842ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk falling at 15.000ns
+  Destination Clock:    clk falling at 15.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: main_unit/rng_unit/seq_0 to main_unit/rng_unit/seq_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y24.YQ      Tcko                  0.409   main_unit/rng_unit/seq<1>
+                                                       main_unit/rng_unit/seq_0
+    SLICE_X13Y24.BX      net (fanout=2)        0.353   main_unit/rng_unit/seq<0>
+    SLICE_X13Y24.CLK     Tckdi       (-Th)    -0.080   main_unit/rng_unit/seq<1>
+                                                       main_unit/rng_unit/seq_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.842ns (0.489ns logic, 0.353ns route)
+                                                       (58.1% logic, 41.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point main_unit/rng_unit/seq_3 (SLICE_X13Y29.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.851ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               main_unit/rng_unit/seq_2 (FF)
+  Destination:          main_unit/rng_unit/seq_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.851ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk falling at 15.000ns
+  Destination Clock:    clk falling at 15.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: main_unit/rng_unit/seq_2 to main_unit/rng_unit/seq_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y29.YQ      Tcko                  0.409   main_unit/rng_unit/seq<3>
+                                                       main_unit/rng_unit/seq_2
+    SLICE_X13Y29.BX      net (fanout=3)        0.362   main_unit/rng_unit/seq<2>
+    SLICE_X13Y29.CLK     Tckdi       (-Th)    -0.080   main_unit/rng_unit/seq<3>
+                                                       main_unit/rng_unit/seq_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.851ns (0.489ns logic, 0.362ns route)
+                                                       (57.5% logic, 42.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point main_unit/rng_unit/seq_4 (SLICE_X12Y27.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.868ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               main_unit/rng_unit/seq_3 (FF)
+  Destination:          main_unit/rng_unit/seq_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.870ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.003 - 0.001)
+  Source Clock:         clk falling at 15.000ns
+  Destination Clock:    clk falling at 15.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: main_unit/rng_unit/seq_3 to main_unit/rng_unit/seq_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y29.XQ      Tcko                  0.411   main_unit/rng_unit/seq<3>
+                                                       main_unit/rng_unit/seq_3
+    SLICE_X12Y27.BY      net (fanout=2)        0.327   main_unit/rng_unit/seq<3>
+    SLICE_X12Y27.CLK     Tckdi       (-Th)    -0.132   main_unit/rng_unit/seq<5>
+                                                       main_unit/rng_unit/seq_4
+    -------------------------------------------------  ---------------------------
+    Total                                      0.870ns (0.543ns logic, 0.327ns route)
+                                                       (62.4% logic, 37.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clockmanager_unit_CLK2X_BUF = PERIOD TIMEGRP "clockmanager_unit_CLK2X_BUF"
+        TS_clock / 2 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.224ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.388ns (Trpw)
+  Physical resource: screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<3>/SR
+  Logical resource: screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_3/SR
+  Location pin: SLICE_X1Y25.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 7.224ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.388ns (Trpw)
+  Physical resource: screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<3>/SR
+  Logical resource: screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_3/SR
+  Location pin: SLICE_X1Y25.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 7.224ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.388ns (Trpw)
+  Physical resource: screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg<3>/SR
+  Logical resource: screen_unit/mouse_unit/ps2_rxtx_unit/ps2_tx_unit/filter_reg_2/SR
+  Location pin: SLICE_X1Y25.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clock
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clock                       |     20.000ns|      6.000ns|     48.988ns|            0|            9|            0|     18072902|
+| TS_clockmanager_unit_CLK2X_BUF|     10.000ns|     24.494ns|          N/A|            9|            0|     18072902|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |   24.494|         |         |    5.764|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 9  Score: 111066  (Setup/Max: 111066, Hold: 0)
+
+Constraints cover 18072902 paths, 0 nets, and 5785 connections
+
+Design statistics:
+   Minimum period:  24.494ns{1}   (Maximum frequency:  40.826MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Jan 26 09:43:05 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4531 MB
+
+
+

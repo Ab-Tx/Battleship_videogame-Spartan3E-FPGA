@@ -1,0 +1,51 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+D:\Programas\Xillinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -uc DigBasys2.ucf -p xc3s100e-cp132-5 pong_top_an.ngc
+pong_top_an.ngd
+
+Reading NGO file
+"C:/Users/Dallas/Documents/XillinxProjects/Projeto_V05/pong_top_an.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "DigBasys2.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clock', used in period specification
+   'TS_clock', was traced into DCM_SP instance clockmanager_unit/DCM_SP_INST.
+   The following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLK2X: <TIMESPEC TS_clockmanager_unit_CLK2X_BUF = PERIOD
+   "clockmanager_unit_CLK2X_BUF" TS_clock / 2 HIGH 50%>
+
+Done...
+
+WARNING:NgdBuild:1212 - User specified non-default attribute value
+   (40.0000000000000000) was detected for the CLKIN_PERIOD attribute on DCM
+   "clockmanager_unit/DCM_SP_INST".  This does not match the PERIOD constraint
+   value (20 ns.).  The uncertainty calculation will use the non-default
+   attribute value.  This could result in incorrect uncertainty calculated for
+   DCM output clocks.
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 4407076 kilobytes
+
+Writing NGD file "pong_top_an.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "pong_top_an.bld"...

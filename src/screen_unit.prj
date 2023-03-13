@@ -1,0 +1,6 @@
+vhdl work "ps2_tx.vhd"
+vhdl work "ps2_rx.vhd"
+vhdl work "ps2_rxtx.vhd"
+vhdl work "mouse.vhd"
+vhdl work "char_rom.vhd"
+vhdl work "screen_unit.vhd"

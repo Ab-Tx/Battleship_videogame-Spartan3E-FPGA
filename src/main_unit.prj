@@ -1,0 +1,3 @@
+vhdl work "rng_unit.vhd"
+vhdl work "disp_hext_mux.vhd"
+vhdl work "main_unit.vhd"
