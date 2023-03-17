@@ -3,10 +3,10 @@
 This repository contains a project for the Spartan3E FPGA. 
 The project consists on a limited version of the classic game "Battleship".
 
-The player wins by reaching 15 points before the algorythm, otherwise loses.
+The player wins by reaching 15 points before the algorithm, otherwise loses.
 Boats are placed statically (their position is pre-defined and cannot be chosen) across an 8 by 8 grid. These have length of 1,2,3,4 and 5.
 
-The pattern of the algorythm's boat positions is chosen randomly from four different pre-defined grids.
+The pattern of the algorithm's boat positions is chosen randomly from four different pre-defined grids.
 
 ## Requirements
 
@@ -50,4 +50,4 @@ Total CPU time to MAP completion:   3 secs
 
 ## Known issues
 
-- Both player and algorythm can select positions already used.
+- Both player and algorithm can select positions already used.
